@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <OutputType>Library</OutputType>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <IsPackable>true</IsPackable>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackageId>Futurum.Microsoft.Extensions.DependencyInjection.Core.Extensions</PackageId>
+        <PackageIcon>dotnet-logo.png</PackageIcon>
+        <Description>A dotnet library that extends Futurum.Microsoft.Extensions.DependencyInjection, to make it fully compatible with Futurum.Core.</Description>
+        <PackageProjectUrl>https://github.com/futurum-dev/dotnet.futurum.microsoft.extensions.dependencyinjection.core.extensions</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/futurum-dev/dotnet.futurum.microsoft.extensions.dependencyinjection.core.extensions</RepositoryUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\..\assets\dotnet-logo.png" Pack="true" PackagePath="\" />
+    </ItemGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <DocumentationFile>bin\Debug\net7.0\Futurum.Microsoft.Extensions.DependencyInjection.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <DocumentationFile>bin\Release\net7.0\Futurum.Microsoft.Extensions.DependencyInjection.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Futurum.Core" Version="1.0.16"/>
+        <PackageReference Update="MinVer" Version="4.0.0"/>
+    </ItemGroup>
+
+</Project>
